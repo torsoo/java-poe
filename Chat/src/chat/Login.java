@@ -87,18 +87,18 @@ public class Login {
             this.lastName = lastName;
             this.cellPhoneNumber =cellPhoneNumber;
             
-            message = "Username successfully captured. Password successfully captured." + "Cell phone number successfully added. You have been registered successfully.";
+            message = "Username successfully captured. Password successfully captured. " + "Cell phone number successfully added. You have been registered successfully.";
         }else {
             if (!validUsername) {
-                message = "Username is not correctly formatted ;please ensure that your "+ "username contains an underscore and is no more than five"+"characters in length.";
+                message = "Username is not correctly formatted; please ensure that your "+ "username contains an underscore and is no more than five "+"characters in length.";
             }
             
             if (!validPassword) {
-                message ="Password is not correctly formatted; please ensure that the "+ "password contains atleast eight characters , a capital letter ,"+"a number , and a special character.";
+                message ="Password is not correctly formatted; please ensure that the "+ "password contains at least eight characters, a capital letter, "+"a number, and a special character.";
             }
             
             if (!validCellphone) {
-                message = "Cell phone number incorrectly formatted or does not contain" + " international code";
+                message = "Cell phone number incorrectly formatted or does not contain" + " international code.";
             }
         }
         return message;
@@ -121,10 +121,10 @@ public class Login {
         String status= " ";
         
         if (loginSuccess){
-            status ="Welcome "+ firstName +"  " +lastName +" it is great to see you again.";
+            status ="Welcome "+ firstName +", "+lastName +" it is great to see you.";
             
         }else {
-            status = "Username or password incorrect,please try again.";
+            status = "Username or password incorrect, please try again.";
         }
         return status;
     }
