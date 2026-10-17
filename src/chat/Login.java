@@ -6,18 +6,19 @@ package chat;
 
 import java.util.Scanner;
 
-/**
+/**4
+ * m 
  *
  * @author thand
  */
 public class Login {
     
     //declaration 
-    String username;
-    String password;
-    String firstName;
-    String lastName;
-    String cellPhoneNumber; 
+    private String username;
+    private String password;
+    private String firstName;
+    private String lastName;
+    private String cellPhoneNumber; 
     String ValidPassword;
     String validCellPhoneNumber;
     
@@ -49,9 +50,9 @@ public class Login {
             
             if (Character.isUpperCase(chara)){
                 bolHasUpperCase = true;
-            }else if (Character.isLetterOrDigit(chara)){
+            }else if (Character.isDigit(chara)){
                 bolHasDigit = true;
-            }else if (!Character.isDigit(chara)) {            
+            }else if (!Character.isLetterOrDigit(chara)) {            
                 bolHasSpecial = true;
             }
         }
@@ -59,6 +60,7 @@ public class Login {
         return bolHasUpperCase && bolHasDigit && bolHasSpecial;
     }
     
+    // Regex source: https://www.geeksforgeeks.org/dsa/validate-phone-numbers-with-country-code-extension-using-regular-expression/
     public boolean checkCellPhoneNumber (String cellPhoneNumber) {
         //declaration 
         boolean validCell = false;
@@ -121,7 +123,7 @@ public class Login {
         String status= " ";
         
         if (loginSuccess){
-            status ="Welcome "+ firstName +", "+lastName +" it is great to see you.";
+            status ="Welcome "+ firstName +", "+lastName +" it is great to see you again.";
             
         }else {
             status = "Username or password incorrect, please try again.";
