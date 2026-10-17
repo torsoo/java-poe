@@ -91,6 +91,12 @@ W3Schools-to verify help me with some of my work
 
 I also used this YouTube channel to guide me as well https://youtube.com/@brocodez?si=RIxW1G6njghsDZ4E
 
+## Part 2: Sending messages
+- Run Main.java and log in.
+- Menu: 1 Send Messages, 2 Show recently sent messages, 3 Quit.
+- Each message has a 10-digit ID, a recipient number, text of up to 250 characters and a hash.
+- Messages can be sent, stored (saved to storedMessages.json) or disregarded.
+- Run the JUnit tests in MessageTest.java to check the Message class.
 ---
 
 ## Author
