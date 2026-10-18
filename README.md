@@ -131,12 +131,36 @@ W3Schools-to verify help me with some of my work
 I also used this YouTube channel to guide me as well https://youtube.com/@brocodez?si=RIxW1G6njghsDZ4E
 
 ## Part 2: Sending messages
-- Run Main.java and log in.
-- Menu: 1 Send Messages, 2 Show recently sent messages, 3 Quit.
-- Each message has a 10-digit ID, a recipient number, text of up to 250 characters and a hash.
-- Messages can be sent, stored (saved to storedMessages.json) or disregarded.
-- Run the JUnit tests in MessageTest.java to check the Message class.
----
+### Project Description
+Part 2 adds messaging to the chat application. After logging in, the user can create messages, validate them, and choose to send, store or disregard each one. The Message class holds the message data and the rules, and Main.java handles the menu and user input.
+
+### Menu Options
+1. *Send Messages* - enter how many messages to create, then enter each recipient and message text.
+2. *Show recently sent messages* - prints the messages sent during this run of the program.
+3. *Quit* - exits the program and shows the total number of messages sent.
+
+### Message Rules
+- *Message ID:* a randomly generated 10-digit number.
+- *Recipient number:* must be a valid South African cell phone number with the international code (for example +27718693002).
+- *Message text:* a maximum of 250 characters. If it is too long, the program tells the user by how many characters it exceeds the limit (for example "Message exceeds 250 characters by 10; please reduce the size.").
+- *Message hash:* each message gets a hash built from its ID, its number and its text.
+- *Send options:* the user can *Send, **Store* or *Disregard* each message.
+
+### Data Storage
+Messages the user chooses to store are saved to storedMessages.json using the json-simple library (lib/json-simple-1.1.jar).
+
+### Unit Tests
+MessageTest.java has JUnit 4 tests that cover:
+- message length (success and failure cases)
+- recipient number validation
+- message ID and message hash creation
+
+To run them in NetBeans, right-click MessageTest.java and choose *Test File*.
+
+### How to Run
+1. Clone the repository and open the project in NetBeans.
+2. Check that json-simple and JUnit are listed under Libraries.
+3. Run Main.java, register or log in, then use the menu.
 
 ## Author
 Thandeka Radebe
