@@ -68,19 +68,14 @@ public class MessageTest {
         Message m = new Message("+27718693002", "Hi Mike, can you join us for dinner tonight?");
         String expected = "00:0:HITONIGHT";
         // a fixed ID starting with "00" is passed in directly, since the
-        // real message ID is randomly generated and would never reliably
+        // real message ID is randomly generated and would never 
         // produce the same expected output twice
         String actual = m.createMessageHash("0012345678", 0,
                 "Hi Mike, can you join us for dinner tonight?");
         assertEquals(expected, actual);
     }
  
-    // NOTE: the brief's point 9 also lists a test "Message ID is created"
-    // expecting the output "Message ID generated: <Message ID>" - no
-    // method in the brief's own method table (page 14) actually returns
-    // a string in that format, so no test is written for it here. Worth
-    // confirming with the lecturer what this is meant to test.
- 
+    
  
     // === checkMessageID() returns boolean - assertTrue/assertFalse ===
  
@@ -100,7 +95,7 @@ public class MessageTest {
  
  
     // === sentMessage() returns String - assertEquals ===
-    // uses the brief's literal choice wording from point 9's "Additional
+  
     // test data" ('Send Message', 'Disregard Message', 'Store Message')
  
     @Test
